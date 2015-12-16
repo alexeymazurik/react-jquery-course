@@ -1,3 +1,59 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+footer {
+  margin: 20px;
+  font-size: 1.2em;
+}
+
+.alert {
+  h3 {
+    margin-top: 0;
+  }
+
+  font-size: 1.2em;
+}
+
+section {
+  position: relative;
+
+  p {
+    margin: 25px 0;
+  }
+
+  li, p {
+    font-size: 1.2em;
+  }
+
+  img {
+    display: block;
+    width: 30%;
+  }
+
+  h3 {
+    font-weight: 400;
+  }
+
+  h4 {
+    margin-top: 25px;
+    font-size: 1.4em;
+  }
+}
+
+pre {
+  
+  padding: 0 !important;
+  font-size: 1em !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: white !important;
+
+  code {
+    border-radius: 5px !important;
+    border: 1px solid darken(#F8F8F8, 10);
+    background: #F8F8F8 !important;
+  }
+
+}

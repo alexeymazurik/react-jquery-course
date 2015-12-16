@@ -2,8 +2,9 @@ Rails.application.routes.draw do
 
   root to: 'static_pages#home'
 
-  get 'static_pages/home'
-  get 'static_pages/about'
+  get '/theory', to: 'static_pages#theory'
+  get '/practice', to: 'static_pages#practice'
+  get '/tests', to: 'static_pages#tests'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

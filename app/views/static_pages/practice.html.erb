@@ -1,5 +1,491 @@
-<h1>Практика</h1>
+<div class="alert alert-danger" role="alert">
+  <strong>Внимание!</strong>
+  Если код отображается некорректно - обновите страницу. Если проблема неустранена - используйте браузер более новой версии.
+</div>
 
-<p>
-  ...
-</p>
+<div class="alert alert-info" role="alert">
+  <h3>Практическое задание</h3>
+  <strong>Внимание!</strong>
+  Не рекомендуется приступать к выполнению практического задания без предварительного ознакомления с теоретическим материалом. Если вы еще не успели прочитать теорию по созданию компонентов, то посетите раздел <a href="/theory">Теория</a> на сайте.
+</div>
+
+<section class="practice">
+  <div class="task">
+    <p>
+      Необходимо реализовать одинаковые <b>jQuery-Плагин</b> и <b>ReactJS-Компонент</b>, которые модифицируют таблицу таким образом, что шапка таблицы преобразовывается в кнопки с соответствующими названиями. При нажатии на кнопку она вжимается и происходит сортировка по данной колонке. При отжатии кнопки таблица принимает исходное значение. При нажатии на несколько кнопок происходит сортировка по нескольким полям, порядок сортировки по данным полям определяется порядком нажатии пользователям на кнопки.
+    </p>
+
+    <h3>Проверочная таблица:</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Имя</th>
+          <th>Отчество</th>
+          <th>Фамилия</th>
+          <th>Год рождения</th>
+          <th>Статус</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Иван</td>
+          <td>Иванович</td>
+          <td>Иванов</td>
+          <td>1985</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Иван</td>
+          <td>Иванович</td>
+          <td>Петров</td>
+          <td>1986</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Иван</td>
+          <td>Петрович</td>
+          <td>Николаев</td>
+          <td>1985</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Иван</td>
+          <td>Николаевич</td>
+          <td>Иванов</td>
+          <td>1982</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Иван</td>
+          <td>Иванович</td>
+          <td>Николаев</td>
+          <td>1990</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Петр</td>
+          <td>Петрович</td>
+          <td>Валентинов</td>
+          <td>1981</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Петр</td>
+          <td>Валентинович</td>
+          <td>Валентинов</td>
+          <td>1985</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Петр</td>
+          <td>Николаевич</td>
+          <td>Петров</td>
+          <td>1985</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Петр</td>
+          <td>Валентинович</td>
+          <td>Петров</td>
+          <td>1985</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Николай</td>
+          <td>Николаевич</td>
+          <td>Николаев</td>
+          <td>1986</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Николай</td>
+          <td>Николаевич</td>
+          <td>Валентинов</td>
+          <td>1986</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Николай</td>
+          <td>Валентинович</td>
+          <td>Николаев</td>
+          <td>1972</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Валентин</td>
+          <td>Николаевич</td>
+          <td>Валентинов</td>
+          <td>1990</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Валентин</td>
+          <td>Иванович</td>
+          <td>Валентинов</td>
+          <td>1972</td>
+          <td>1</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="results">
+    
+    <h3>Результат выполнения в обоих случаях должен быть следующим:</h3>
+
+    <div id="jquery">
+      <table>
+        <thead>
+          <tr>
+            <td>Имя</td>
+            <td>Отчество</td>
+            <td>Фамилия</td>
+            <td>Год рождения</td>
+            <td>Статус</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Иван</td>
+            <td>Иванович</td>
+            <td>Иванов</td>
+            <td>1985</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Иван</td>
+            <td>Иванович</td>
+            <td>Петров</td>
+            <td>1986</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Иван</td>
+            <td>Петрович</td>
+            <td>Николаев</td>
+            <td>1985</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Иван</td>
+            <td>Николаевич</td>
+            <td>Иванов</td>
+            <td>1982</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Иван</td>
+            <td>Иванович</td>
+            <td>Николаев</td>
+            <td>1990</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Петр</td>
+            <td>Петрович</td>
+            <td>Валентинов</td>
+            <td>1981</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Петр</td>
+            <td>Валентинович</td>
+            <td>Валентинов</td>
+            <td>1985</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Петр</td>
+            <td>Николаевич</td>
+            <td>Петров</td>
+            <td>1985</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Петр</td>
+            <td>Валентинович</td>
+            <td>Петров</td>
+            <td>1985</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Николай</td>
+            <td>Николаевич</td>
+            <td>Николаев</td>
+            <td>1986</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Николай</td>
+            <td>Николаевич</td>
+            <td>Валентинов</td>
+            <td>1986</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Николай</td>
+            <td>Валентинович</td>
+            <td>Николаев</td>
+            <td>1972</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Валентин</td>
+            <td>Николаевич</td>
+            <td>Валентинов</td>
+            <td>1990</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Валентин</td>
+            <td>Иванович</td>
+            <td>Валентинов</td>
+            <td>1972</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="code">
+    <h3>Исходные коды</h3>
+    <div class="alert alert-warning">
+      <b>Внимание!</b> Исходные коды можно найти в моем GitHub репозитории по ссылке <a href="https://github.com/alexeymazurik/jquery-react-plugins" target="_blank">https://github.com/alexeymazurik/jquery-react-plugins</a>
+    </div>
+    <p>
+      Разумеется, необходимо подключать jquery последней версии для корректной работы jQuery-плагина, а также последнюю версию ReactJS и JSXTransformer для корректной работы ReactJS компонента. Настоятельно рекомендуется ознакомится с исходыми кодами на GitHub по ссылке выше.
+    </p>
+    <h4>jQuery-плагин</h4>
+    <b>tableSortingPlugin.js</b>
+    <pre><code class="js">
+      (function($){
+
+          $.fn.sorting = function() {
+
+
+              var thead = [],
+                  tbody = [],
+                  $self = $(this),
+                  multiplySort = [];
+
+
+
+              $self.find('thead tr td').each(function(){
+                  thead.push($(this).text());
+                  $(this).css({
+                      "cursor": "pointer"
+                  })
+              });
+
+
+
+              $self.find('tbody tr').each(function(){
+                  var tmp = {};
+                  $(this).find('td').each(function(i){
+                      tmp[thead[i]] = $(this).text();
+                  });
+                  tbody.push(tmp);
+              });
+
+              $self.find('thead tr td').each(function(){
+                  $(this).on('click', function(){
+                      var tmp = $(this).text();
+                      if (multiplySort.indexOf(tmp) == -1) {
+                          multiplySort.push(tmp);
+                          $(this).css("background", "lightgreen");
+                      }
+                      else {
+                          multiplySort.splice(multiplySort.indexOf(tmp),1);
+                          $(this).css("background", "none");
+                      }
+                      sort();
+                  });
+              });
+
+
+              function sort() {
+                  var smth = multiplySort.length ? tbody.slice()
+                  .sort(sortingEngine.dynamicSortMultiple(multiplySort)) : tbody.slice(),
+                      tbodyCells = [];
+
+                  $self.find('tbody tr').each(function(){
+                      var tmp = [];
+                      $(this).find('td').each(function(){
+                          tmp.push($(this));
+                      });
+                      tbodyCells.push(tmp);
+                  });
+
+                  for (var i = 0; i < tbodyCells.length; i++) {
+                      for (var j = 0; j < tbodyCells[i].length; j++) {
+                          tbodyCells[i][j].text(smth[i][thead[j]]);
+                      }
+                  }
+              }
+
+          }
+      }($));
+    </code></pre>
+    <b>sortFunction.js - сортирующий движок, который используется в коде:</b>
+    <pre><code class="js">
+      var sortingEngine = (function() {
+          function dynamicSort(property) {
+              var sortOrder = 1;
+              if(property[0] === "-") {
+                  sortOrder = -1;
+                  property = property.substr(1);
+              }
+              return function (a,b) {
+                  var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+                  return result * sortOrder;
+              }
+          }
+
+          function dynamicSortMultiple(multiplySort) {
+              /*
+               * save the arguments object as it will be overwritten
+               * note that arguments object is an array-like object
+               * consisting of the names of the properties to sort by
+               */
+              var props = multiplySort;
+              return function (obj1, obj2) {
+                  var i = 0, result = 0, numberOfProperties = props.length;
+                  /* try getting a different result from 0 (equal)
+                   * as long as we have extra properties to compare
+                   */
+                  while(result === 0 && i < numberOfProperties) {
+                      result = dynamicSort(props[i])(obj1, obj2);
+                      i++;
+                  }
+                  return result;
+              }
+          }
+
+          return {
+              dynamicSort: dynamicSort,
+              dynamicSortMultiple: dynamicSortMultiple
+          }
+      })();
+    </code></pre>
+    <h4>ReactJS-Компонент</h4>
+    <b>react-component.js</b>
+    <pre><code class="js">
+      var Table = React.createClass({
+        loadCommentsFromServer: function() {
+            $.ajax({
+              url: this.props.url,
+              dataType: 'json',
+              success: function(data) {
+                this.setState({multiplySort: [], data: data.slice(), copy: data.slice()});
+              }.bind(this),
+              error: function(xhr, status, err) {
+                console.error(this.props.url, status, err.toString());
+              }.bind(this)
+            });
+        },
+
+        getInitialState: function(){
+            return {multiplySort: [], data: [], copy: []}
+        },
+
+        componentDidMount: function() {
+            this.loadCommentsFromServer();
+        },
+
+        changeMultiplyParams: function(param) {
+
+
+            var tmp = this.state.multiplySort;
+            var tmpData = this.state.data.slice();
+            var tmpCopy = this.state.copy.slice();
+
+            if (tmp.indexOf(param) == -1) {
+                tmp.push(param);
+            }
+            else {
+                tmp.splice(tmp.indexOf(param), 1);
+            }
+
+            tmpData = tmp.length ? tmpData.sort(sortingEngine.dynamicSortMultiple(tmp)) : tmpCopy;
+
+            this.setState({multiplySort: tmp, data: tmpData, copy: tmpCopy});
+        },
+
+        render: function() {
+            var list = this.state.data;
+            var header = [];
+            var self = this;
+            var params = this.state.multiplySort;
+
+            for (var key in list[0]) {
+                header.push(key);
+            }
+
+            return (
+                &lt;table style={{border: "1px solid black"}}&gt;
+                    &lt;thead&gt;
+                        &lt;tr&gt;
+                            { header.map(function(elem){
+                                return (params.indexOf(elem) == -1) 
+                                ? // if statement true
+                                (&lt;td style={{fontWeight: "bold", border: "1px solid black", cursor: "pointer", padding: "5px"}} onClick={self.changeMultiplyParams.bind(self, elem)}&gt;{elem}&lt;/td&gt;)
+                                : // else
+                                (&lt;td style={{fontWeight: "bold", border: "1px solid black", cursor: "pointer", background: "lightgreen", padding: "5px"}} onClick={self.changeMultiplyParams.bind(self, elem)}&gt;{elem}&lt;/td&gt;)
+                             
+                            })}
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        {list.map(function(element){
+                            return (
+                                &lt;tr&gt;
+                                    {header.map(function(el){
+                                        return (
+                                            &lt;td style={{border: "1px solid black", padding: '5px'}}&gt;
+                                                {element[el]}
+                                            &lt;/td&gt;
+                                            )
+                                    })}
+                                &lt;/tr&gt;
+                                )
+                        })}
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+                )
+        }
+    });
+
+    React.render(
+        &lt;Table url="/getData" /&gt;,
+        document.getElementById('content')
+    )
+    </code></pre>
+  <p>
+    В ReactJS-компоненте были использованы данные которые приходят с сервера. Поэтому рекомендую развернуть маленький сервер на NodeJS и по <code>GET</code> запросу <code>/getData</code> возвращать следующий json, хотя вообще можно возвращать любые необходимые данные.
+  </p>
+
+  <b>data.json</b>
+  <pre><code class="js">
+    [
+      {"First name": "Иван", "Middle name": "Иванович", "Last name": "Иванов", "Year": 1985, "Status": 1},
+      {"First name": "Иван", "Middle name": "Иванович", "Last name": "Петров", "Year": 1986, "Status": 0},
+      {"First name": "Иван", "Middle name": "Петрович", "Last name": "Николаев", "Year": 1985, "Status": 0},
+      {"First name": "Иван", "Middle name": "Николаевич", "Last name": "Иванов", "Year": 1982, "Status": 1},
+      {"First name": "Иван", "Middle name": "Иванович", "Last name": "Николаев", "Year": 1990, "Status": 1},
+      {"First name": "Петр", "Middle name": "Петрович", "Last name": "Валентинов", "Year": 1981, "Status": 1},
+      {"First name": "Петр", "Middle name": "Валентинович", "Last name": "Валентинов", "Year": 1985, "Status": 0},
+      {"First name": "Петр", "Middle name": "Николаевич", "Last name": "Петров", "Year": 1985, "Status": 0},
+      {"First name": "Петр", "Middle name": "Валентинович", "Last name": "Петров", "Year": 1985, "Status": 1},
+      {"First name": "Николай", "Middle name": "Николаевич", "Last name": "Николаев", "Year": 1986, "Status": 1},
+      {"First name": "Николай", "Middle name": "Николаевич", "Last name": "Валентинов", "Year": 1986, "Status": 1},
+      {"First name": "Николай", "Middle name": "Валентинович", "Last name": "Николаев", "Year": 1972, "Status": 0},
+      {"First name": "Валентин", "Middle name": "Николаевич", "Last name": "Валентинов", "Year": 1990, "Status": 0},
+      {"First name": "Валентин", "Middle name": "Иванович", "Last name": "Валентинов", "Year": 1972, "Status": 1}
+    ]
+  </code></pre>
+  </div>
+</section>
+
+<script src="/vendor/scripts/jquery-plugin.js"></script>
+

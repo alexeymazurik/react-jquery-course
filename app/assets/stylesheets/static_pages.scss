@@ -2,6 +2,37 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.jumbotron {
+  img {
+    width: 20%;
+  }
+}
+
+.results {
+  #jquery {
+    table td, table {
+      border: 1px solid black;
+      padding: 5px;
+    }
+
+    thead {
+      font-weight: bold;
+    }
+  }
+
+
+  a {
+      font-size: 20px;
+      color: black;
+      padding: 5px;
+      text-decoration: none;
+  }
+
+  a:hover {
+      background: lightgray;
+  }
+}
+
 
 footer {
   margin: 20px;
@@ -34,6 +65,7 @@ section {
 
   h3 {
     font-weight: 400;
+    margin: 25px 0;
   }
 
   h4 {

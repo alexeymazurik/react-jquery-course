@@ -9,6 +9,28 @@
 }
 
 .results {
+  font-size: 1.6em;
+}
+
+.tests {
+  font-size: 1.4em;
+
+  .question-title {
+    display: block;
+    margin: 25px 0;
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+
+  label {
+    font-weight: 400;
+    span {
+      margin-left: 20px;
+    }
+  }
+}
+
+.results {
   #jquery {
     table td, table {
       border: 1px solid black;
@@ -22,14 +44,14 @@
 
 
   a {
-      font-size: 20px;
-      color: black;
-      padding: 5px;
-      text-decoration: none;
+    font-size: 20px;
+    color: black;
+    padding: 5px;
+    text-decoration: none;
   }
 
   a:hover {
-      background: lightgray;
+    background: lightgray;
   }
 }
 
@@ -75,7 +97,7 @@ section {
 }
 
 pre {
-  
+
   padding: 0 !important;
   font-size: 1em !important;
   border: none !important;
